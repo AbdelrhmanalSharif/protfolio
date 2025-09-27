@@ -14,7 +14,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.4.9
-  url_strategy: ^0.2.0
 
 dev_dependencies:
   flutter_test:
@@ -63,4 +62,5 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
   # see https://flutter.dev/to/font-from-package
