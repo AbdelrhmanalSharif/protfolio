@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_riverpod: ^2.4.9
   url_launcher: ^6.3.2
+  url_strategy: ^0.2.0  # For removing # from URLs
 
 dev_dependencies:
   flutter_test:
@@ -59,12 +60,20 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # Add web-specific assets
   assets:
     - assets/images/
+    - web/favicon.png
+    - web/icons/
+    - web/manifest.json
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/to/resolution-aware-images
+  # Add web fonts
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Roboto-Bold.ttf
+          weight: 700
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package

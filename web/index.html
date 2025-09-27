@@ -18,21 +18,98 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Flutter Developer Portfolio - Showcasing mobile and web development expertise">
+  <meta name="keywords" content="Flutter, Developer, Portfolio, Mobile Apps, Web Development">
+  <meta name="author" content="Your Name">
 
   <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="protfolio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="Flutter Portfolio">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>protfolio</title>
+  <!-- Manifest -->
   <link rel="manifest" href="manifest.json">
+
+  <title>Flutter Developer Portfolio</title>
+
+  <!-- GitHub Pages 404 handling -->
+  <script type="text/javascript">
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <!-- 404.html redirect script for GitHub Pages -->
+  <script type="text/javascript">
+    var pathSegmentsToKeep = 1;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+
+  <!-- Flutter loading placeholder -->
+  <div id="loading">
+    <style>
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0e27;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #333;
+        border-top: 3px solid #64ffda;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    <div class="spinner"></div>
+  </div>
+
+  <script>
+    window.addEventListener('load', function(ev) {
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+            // Hide loading screen
+            document.getElementById('loading').style.display = 'none';
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

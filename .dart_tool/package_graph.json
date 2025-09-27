@@ -10,7 +10,8 @@
         "cupertino_icons",
         "flutter",
         "flutter_riverpod",
-        "url_launcher"
+        "url_launcher",
+        "url_strategy"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -40,6 +41,13 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "url_strategy",
+      "version": "0.2.0",
+      "dependencies": [
+        "flutter_web_plugins"
       ]
     },
     {
@@ -171,6 +179,13 @@
         "stream_channel",
         "string_scanner",
         "term_glyph"
+      ]
+    },
+    {
+      "name": "flutter_web_plugins",
+      "version": "0.0.0",
+      "dependencies": [
+        "flutter"
       ]
     },
     {
@@ -326,13 +341,6 @@
       "name": "web",
       "version": "1.1.1",
       "dependencies": []
-    },
-    {
-      "name": "flutter_web_plugins",
-      "version": "0.0.0",
-      "dependencies": [
-        "flutter"
-      ]
     },
     {
       "name": "plugin_platform_interface",

@@ -230,6 +230,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "url_strategy",
+      "rootUri": "file:///C:/Users/abede/AppData/Local/Pub/Cache/hosted/pub.dev/url_strategy-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///C:/Users/abede/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.2.0",
       "packageUri": "lib/",
