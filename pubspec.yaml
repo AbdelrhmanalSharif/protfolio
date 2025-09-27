@@ -8,23 +8,6 @@ version: 1.0.0+1
 environment:
   sdk: '>=3.0.0 <4.0.0'
 
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_riverpod: ^2.4.9
-  url_strategy: ^0.2.0
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^2.0.0
-
-flutter:
-  uses-material-design: true
-  
-  assets:
-    - assets/images/
-    - assets/icons/
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
@@ -43,24 +26,11 @@ flutter:
   
   assets:
     - assets/images/
-    - assets/icons/
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
-flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
-
-  # Add web-specific assets
-  assets:
-    - assets/images/
     - web/favicon.png
     - web/icons/
     - web/manifest.json
+
+
 
   # Add web fonts
   fonts:
