@@ -26,7 +26,6 @@ flutter:
   
   assets:
     - assets/images/
-    - web/favicon.png
     - web/icons/
     - web/manifest.json
 
